@@ -60,7 +60,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "flex items-center space-x-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all",
+                  "flex items-center space-x-2 px-4 py-2.5 rounded-2xl text-sm font-bold transition-all",
                   isActive(link.path) 
                     ? "text-primary bg-primary/10 shadow-sm" 
                     : "text-gray-600 dark:text-slate-400 hover:text-primary hover:bg-gray-50 dark:hover:bg-slate-800"
@@ -76,19 +76,19 @@ const Navbar = () => {
             <div className="flex items-center space-x-2">
               <button
                 onClick={toggleTheme}
-                className="p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-slate-800 text-gray-600 dark:text-slate-400 transition-colors"
+                className="p-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-slate-800 text-gray-600 dark:text-slate-400 transition-colors"
                 title="Toggle Theme"
               >
                 {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
 
-              <Link to="/profile" className="p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-slate-800 text-gray-600 dark:text-slate-400 transition-colors">
+              <Link to="/profile" className="p-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-slate-800 text-gray-600 dark:text-slate-400 transition-colors">
                 <User className="w-5 h-5" />
               </Link>
 
               <button
                 onClick={handleLogout}
-                className="p-3 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 text-gray-600 dark:text-slate-400 hover:text-red-600 transition-colors"
+                className="p-3 rounded-2xl hover:bg-red-50 dark:hover:bg-red-900/20 text-gray-600 dark:text-slate-400 hover:text-red-600 transition-colors"
                 title="Logout"
               >
                 <LogOut className="w-5 h-5" />

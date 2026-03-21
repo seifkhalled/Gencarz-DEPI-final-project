@@ -43,7 +43,7 @@ const FilterPanel = ({ filters, setFilters }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {filterOptions.map((filter) => (
           <div key={filter.label} className="group flex flex-col space-y-3">
-            <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">
+            <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">
               {filter.label}
             </label>
             <div className="relative">
@@ -61,7 +61,7 @@ const FilterPanel = ({ filters, setFilters }) => {
         
         {/* Range Filters */}
         <div className="flex flex-col space-y-3">
-          <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Price Range ($)</label>
+          <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Price Range ($)</label>
           <div className="flex items-center space-x-3">
             <input type="number" placeholder="Min" className="w-1/2 px-5 py-4 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border-2 border-gray-100 dark:border-slate-800 focus:border-primary/50 outline-none text-sm font-black text-gray-700 dark:text-slate-200" />
             <span className="text-gray-300 dark:text-slate-700 font-bold">-</span>
@@ -70,7 +70,7 @@ const FilterPanel = ({ filters, setFilters }) => {
         </div>
 
         <div className="flex flex-col space-y-3">
-          <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Mileage (KM)</label>
+          <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Mileage (KM)</label>
           <div className="flex items-center space-x-3">
             <input type="number" placeholder="Max KM" className="w-full px-5 py-4 rounded-2xl bg-gray-50 dark:bg-slate-800/50 border-2 border-gray-100 dark:border-slate-800 focus:border-primary/50 outline-none text-sm font-black text-gray-700 dark:text-slate-200" />
           </div>

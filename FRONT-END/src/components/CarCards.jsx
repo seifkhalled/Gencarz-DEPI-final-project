@@ -6,19 +6,25 @@ export const CarCard = ({ car }) => {
   return (
     <div className="group relative bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-gray-100 dark:border-slate-800 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-gray-200/50 dark:hover:shadow-primary/5 card-shadow hover:-translate-y-2">
       {/* Image Container */}
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-gray-100 dark:bg-slate-800">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center">
+          <Sparkles className="w-12 h-12 text-primary/20 animate-pulse" />
+        </div>
         <img 
           src={car.image} 
           alt={`${car.brand} ${car.model}`}
           crossOrigin="anonymous"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          onError={(e) => {
+            e.target.style.display = 'none';
+          }}
         />
-        <div className="absolute top-4 left-4">
+        <div className="absolute top-4 left-4 z-20">
           <div className="px-4 py-2 rounded-xl glass dark:bg-slate-900/80 backdrop-blur-md border-white/20 text-[10px] font-black uppercase tracking-widest text-gray-900 dark:text-white">
             {car.condition}
           </div>
         </div>
-        <button className="absolute top-4 right-4 p-2.5 rounded-xl glass dark:bg-slate-900/80 backdrop-blur-md border-white/20 text-gray-900 dark:text-white hover:text-red-500 transition-colors">
+        <button className="absolute top-4 right-4 z-20 p-2.5 rounded-xl glass dark:bg-slate-900/80 backdrop-blur-md border-white/20 text-gray-900 dark:text-white hover:text-red-500 transition-colors">
           <Star className="w-4 h-4" />
         </button>
       </div>

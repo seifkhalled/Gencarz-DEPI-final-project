@@ -51,7 +51,7 @@ const SellCar = () => {
               <div className="space-y-12 relative z-10">
                 {/* Status Toggle */}
                 <div className="flex flex-col space-y-4">
-                  <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Condition</label>
+                  <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Condition</label>
                   <div className="flex p-2 bg-gray-50 dark:bg-slate-800 rounded-2xl border-2 border-gray-100 dark:border-slate-700 w-fit shadow-sm">
                     {['New', 'Used'].map((status) => (
                       <button
@@ -73,7 +73,7 @@ const SellCar = () => {
                 {/* Main Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Brand</label>
+                    <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Brand</label>
                     <input 
                       name="brand"
                       value={formData.brand}
@@ -83,7 +83,7 @@ const SellCar = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Model</label>
+                    <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Model</label>
                     <input 
                       name="model"
                       value={formData.model}
@@ -93,7 +93,7 @@ const SellCar = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Fuel Type</label>
+                    <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Fuel Type</label>
                     <div className="relative group">
                       <select 
                         name="fuelType"
@@ -111,7 +111,7 @@ const SellCar = () => {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Transmission</label>
+                    <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Transmission</label>
                     <div className="relative group">
                       <select 
                         name="transmission"
@@ -127,7 +127,7 @@ const SellCar = () => {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Origin Country</label>
+                    <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Origin Country</label>
                     <input 
                       name="origin"
                       value={formData.origin}
@@ -137,7 +137,7 @@ const SellCar = () => {
                     />
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Mileage (KM)</label>
+                    <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Mileage (KM)</label>
                     <div className="relative group">
                       <input 
                         name="km"
@@ -154,7 +154,7 @@ const SellCar = () => {
 
                 {/* Image Upload Placeholder */}
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Vehicle Images</label>
+                  <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Vehicle Images</label>
                   <div className="border-2 border-dashed border-gray-200 dark:border-slate-700 rounded-[3rem] p-16 flex flex-col items-center justify-center hover:border-primary/50 hover:bg-primary/5 transition-all group cursor-pointer bg-gray-50/50 dark:bg-slate-800/50">
                     <div className="w-20 h-20 rounded-[2rem] bg-white dark:bg-slate-900 border-2 border-gray-100 dark:border-slate-800 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-6 shadow-xl shadow-gray-200/50 dark:shadow-none">
                       <ImageIcon className="w-10 h-10" />
@@ -167,7 +167,7 @@ const SellCar = () => {
                 {/* Price & Description */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="space-y-3 md:col-span-1">
-                    <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Your Price ($)</label>
+                    <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Your Price ($)</label>
                     <div className="relative group">
                       <input 
                         name="price"
@@ -182,7 +182,7 @@ const SellCar = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <label className="text-[10px] font-black text-gray-400 dark:text-slate-500 uppercase tracking-[0.2em] px-1">Description</label>
+                  <label className="text-[11px] font-bold text-gray-500 dark:text-slate-400 tracking-wider px-1">Description</label>
                   <textarea 
                     name="description"
                     value={formData.description}
@@ -221,14 +221,14 @@ const SellCar = () => {
                       <h3 className="font-black text-2xl tracking-tight">AI Advisor</h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Real-time Analysis</span>
+                        <span className="text-[11px] font-bold uppercase tracking-widest text-slate-300">Real-time Analysis</span>
                       </div>
                     </div>
                   </div>
                   
                   <div className="space-y-10">
                     <div className="p-8 rounded-[2rem] bg-white/5 border border-white/10 group hover:bg-white/10 transition-all">
-                      <p className="text-[10px] text-slate-400 mb-2 font-black uppercase tracking-widest">Market Value Estimate</p>
+                      <p className="text-[11px] text-slate-300 mb-2 font-bold uppercase tracking-widest">Market Value Estimate</p>
                       <div className="flex items-baseline space-x-4">
                         <p className="text-5xl font-black text-primary tracking-tighter">$ --,---</p>
                         <span className="text-green-400 text-sm font-black animate-bounce">Live</span>

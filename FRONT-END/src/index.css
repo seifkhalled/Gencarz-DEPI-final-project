@@ -20,12 +20,13 @@
 }
 
 @layer base {
-  :root {
+  :root, .light {
     --background: #F8FAFC;
     --foreground: #111827;
     --primary: #3B82F6;
     --border: #e2e8f0;
     --radius: 1rem;
+    color-scheme: light;
   }
 
   .dark {
@@ -33,6 +34,7 @@
     --foreground: #f8fafc;
     --primary: #3B82F6;
     --border: #1e293b;
+    color-scheme: dark;
   }
 }
 
@@ -43,10 +45,35 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Global Scrollbar Theme Consistency */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 20px;
+    border: 3px solid var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
   }
   h1, h2, h3, h4, h5, h6 {
     color: var(--foreground);
@@ -61,10 +88,11 @@
 }
 
 .glass {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
 .dark .glass {
