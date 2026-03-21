@@ -47,13 +47,13 @@ const Marketplace = () => {
         </div>
 
         {/* Decorative Image */}
-        <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-full max-w-6xl opacity-20 dark:opacity-10 pointer-events-none select-none">
+        <div className="absolute inset-0 w-full h-full opacity-40 dark:opacity-20 pointer-events-none select-none overflow-hidden">
           <img 
-            src="https://placehold.co/1200x400/png?text=Premium+Automotive+Visual" 
-            alt="Hero Car" 
-            crossOrigin="anonymous"
-            className="w-full mask-linear-b"
+            src="/src/images/background_1.jpg" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover blur-[2px]"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white dark:via-slate-950/50 dark:to-slate-950" />
         </div>
       </section>
 

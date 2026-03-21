@@ -1,11 +1,11 @@
 export const brands = [
-  { id: 'bmw', name: 'BMW', logo: 'https://placehold.co/100x100/png?text=BMW' },
-  { id: 'mercedes', name: 'Mercedes', logo: 'https://placehold.co/100x100/png?text=MB' },
-  { id: 'toyota', name: 'Toyota', logo: 'https://placehold.co/100x100/png?text=Toyota' },
-  { id: 'hyundai', name: 'Hyundai', logo: 'https://placehold.co/100x100/png?text=Hyundai' },
-  { id: 'kia', name: 'Kia', logo: 'https://placehold.co/100x100/png?text=Kia' },
-  { id: 'audi', name: 'Audi', logo: 'https://placehold.co/100x100/png?text=Audi' },
-  { id: 'tesla', name: 'Tesla', logo: 'https://placehold.co/100x100/png?text=Tesla' },
+  { id: 'bmw', name: 'BMW', logo: '/src/brand_logos/BMW.png' },
+  { id: 'mercedes', name: 'Mercedes', logo: '/src/brand_logos/Mercedes.png' },
+  { id: 'toyota', name: 'Toyota', logo: '/src/brand_logos/Toyota.png' },
+  { id: 'hyundai', name: 'Hyundai', logo: '/src/brand_logos/Hyundai.png' },
+  { id: 'kia', name: 'Kia', logo: '/src/brand_logos/Kia.png' },
+  { id: 'audi', name: 'Audi', logo: '/src/brand_logos/Audi.png' },
+  { id: 'tesla', name: 'Tesla', logo: '/src/brand_logos/Tesla.png' },
 ];
 
 export const cars = [
